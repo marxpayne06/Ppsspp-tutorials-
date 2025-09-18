@@ -1,0 +1,225 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+}
+header {
+    background: #222;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Flexbox layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffcc00;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+    border-bottom: 1px solid #333;
+}
+/* Fade-in animation (fixed) */
+section {
+    opacity: 1; /* Show by default */
+    transform: translateY(0);
+    transition: all 0.6s ease-out;
+}
+
+/* Hidden state (only if JS adds it) */
+section.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Visible state */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+header {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* makes sure it stays above other content */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffcc00;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #fff;
+}
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+/* Theme Toggle Button */
+#theme-toggle {
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: #ffcc00;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background: #f9f9f9;
+    color: #111;
+}
+
+body.light-mode header {
+    background: #ddd;
+}
+
+body.light-mode nav a {
+    color: #333;
+}
+
+body.light-mode nav a:hover {
+    color: #ff6600;
+}
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between buttons */
+}
+/* Section Card Styles */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #222;
+    color: #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Section Titles */
+section h2 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+}
+section h2 i {
+    margin-right: 8px;
+    color: #ffcc00;
+}
+/* Footer */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid #333;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* hide normal nav */
+    }
+
+    .menu-toggle {
+        display: block; /* show hamburger */
+    }
+
+    header {
+        flex-wrap: wrap; /* make header stack on small screens */
+    }
+
+    section {
+        margin: 20px 10px; /* smaller spacing */
+        padding: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* hide hamburger on desktop */
+    }
+
+    nav {
+        display: flex; /* show full nav */
+        gap: 15px;
+    }
+}
+/* Footer Styles */
+.site-footer {
+  background: #222; /* dark background */
+  color: #f1f1f1;   /* light text */
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-top: 3px solid #ffcc00; /* yellow accent */
+}
+
+.site-footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffcc00; /* highlight heading */
+}
+
+.site-footer a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-cta {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
